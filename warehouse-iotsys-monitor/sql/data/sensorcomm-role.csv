@@ -1,0 +1,10 @@
+name,isSensor,isObserver,authName,authPassword
+TEMPERATURE_SYSTEM_SENSOR,1,0,tempsys,abcd1234
+HUMIDITY_SYSTEM_SENSOR,1,0,humisys,abcd1234
+SIDE_TEMPERATURE_SENSOR,1,0,sidetemp,abcd1234
+SIDE_HUMIDITY_SENSOR,1,0,sidehumi,abcd1234
+CONTAINER_STATUS_SENSOR,1,0,contstat,abcd1234
+TOP_LEVEL_MANAGER,0,1,toplevelman,abcd1234
+TOP_LEVEL_OBSERVER,0,1,toplevelobs,abcd1234
+WAREHOUSE_SCOPE_OBSERVER,0,1,whscopeobs,abcd1234
+CONTAINER_SCOPE_OBSERVER,0,1,cnscopeobs,abcd1234

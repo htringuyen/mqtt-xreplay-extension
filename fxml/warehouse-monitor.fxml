@@ -1,0 +1,514 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.control.TreeView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ToolBar prefHeight="40.0" prefWidth="200.0">
+         <items>
+            <Label text="Graphys MQTT Monitor">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <padding>
+                  <Insets right="30.0" />
+               </padding>
+            </Label>
+            <TextField prefWidth="200.0" promptText="Search">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></TextField>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" />
+            <Separator orientation="VERTICAL">
+               <padding>
+                  <Insets left="8.0" right="8.0" />
+               </padding>
+            </Separator>
+            <Button layoutX="711.0" layoutY="10.0" mnemonicParsing="false" style="-fx-background-color: transparent;" text="NewRTab" underline="true">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button layoutX="791.0" layoutY="10.0" mnemonicParsing="false" style="-fx-background-color: transparent;" text="NewCTab" underline="true">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button layoutX="574.0" layoutY="10.0" mnemonicParsing="false" style="-fx-background-color: transparent;" text="NewATab" underline="true">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Separator orientation="VERTICAL" />
+            <Button mnemonicParsing="false" style="-fx-background-color: transparent;" text="Topics" underline="true">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button mnemonicParsing="false" style="-fx-background-color: transparent;" text="Connections" underline="true">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button mnemonicParsing="false" style="-fx-background-color: transparent;" text="Settings" underline="true">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Separator orientation="VERTICAL">
+               <padding>
+                  <Insets left="8.0" right="8.0" />
+               </padding>
+            </Separator>
+            <Label text="Welcome, username1">
+               <padding>
+                  <Insets left="8.0" right="8.0" />
+               </padding>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Button mnemonicParsing="false" text="Logout">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </items>
+      </ToolBar>
+      <TabPane prefHeight="772.0" prefWidth="1350.0" tabClosingPolicy="ALL_TABS" VBox.vgrow="ALWAYS">
+        <tabs>
+          <Tab text="Untitled Tab 1">
+               <content>
+                  <SplitPane dividerPositions="0.4390602055800294" orientation="VERTICAL">
+                     <items>
+                        <VBox spacing="4.0">
+                           <children>
+                              <ToolBar scaleShape="false" style="-fx-background-color: Silver;">
+                                 <items>
+                                    <Label text="Layout" />
+                                    <TextField prefColumnCount="5" promptText="rowsLim" />
+                                    <TextField prefColumnCount="5" promptText="colsLim" />
+                                    <Separator orientation="VERTICAL" />
+                                    <Label text="Axis-X" />
+                                    <TextField prefColumnCount="5" promptText="ticks" />
+                                    <TextField prefColumnCount="5" promptText="preHours" />
+                                    <Separator orientation="VERTICAL" />
+                                    <Label text="Axis-Y" />
+                                    <TextField prefColumnCount="5" promptText="upper" />
+                                    <TextField prefColumnCount="5" promptText="lower" />
+                                    <Separator orientation="VERTICAL" />
+                                    <Button mnemonicParsing="false" style="-fx-background-color: transparent;" text="MaximizeChart" underline="true">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </Button>
+                                    <Button mnemonicParsing="false" style="-fx-background-color: transparent;" text="DeleteChart" underline="true">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </Button>
+                                    <Button layoutX="808.0" layoutY="10.0" mnemonicParsing="false" style="-fx-background-color: transparent;" text="MergeChart" underline="true">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </Button>
+                                    <Separator orientation="VERTICAL" />
+                                    <Button layoutX="808.0" layoutY="10.0" mnemonicParsing="false" style="-fx-background-color: transparent;" text="ControlMode" underline="true">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </Button>
+                                 </items>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </ToolBar>
+                              <GridPane minHeight="0.0">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <LineChart minHeight="0.0" title="Humidity" GridPane.columnIndex="1">
+                                       <xAxis>
+                                          <CategoryAxis side="BOTTOM" />
+                                       </xAxis>
+                                       <yAxis>
+                                          <NumberAxis side="LEFT" />
+                                       </yAxis>
+                                    </LineChart>
+                                    <LineChart minHeight="0.0" title="Temperature" GridPane.rowIndex="1">
+                                       <xAxis>
+                                          <CategoryAxis side="BOTTOM">
+                                             <effect>
+                                                <Reflection />
+                                             </effect>
+                                          </CategoryAxis>
+                                       </xAxis>
+                                       <yAxis>
+                                          <NumberAxis side="LEFT" />
+                                       </yAxis>
+                                    </LineChart>
+                                    <LineChart minHeight="0.0" title="Humidity" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                       <xAxis>
+                                          <CategoryAxis side="BOTTOM" />
+                                       </xAxis>
+                                       <yAxis>
+                                          <NumberAxis side="LEFT" />
+                                       </yAxis>
+                                    </LineChart>
+                                    <LineChart minHeight="0.0" title="Temperature">
+                                      <xAxis>
+                                        <CategoryAxis side="BOTTOM" />
+                                      </xAxis>
+                                      <yAxis>
+                                        <NumberAxis side="LEFT" />
+                                      </yAxis>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </LineChart>
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="436.0" prefWidth="1300.0">
+                           <children>
+                              <ToolBar style="-fx-background-color: Silver;">
+                                 <items>
+                                    <MenuButton mnemonicParsing="false" text="VN-BD-001">
+                                      <items>
+                                        <MenuItem mnemonicParsing="false" text="Action 1" />
+                                        <MenuItem mnemonicParsing="false" text="Action 2" />
+                                      </items>
+                                    </MenuButton>
+                                    <Separator orientation="VERTICAL" />
+                                    <MenuButton mnemonicParsing="false" text="Param Name">
+                                      <items>
+                                        <MenuItem mnemonicParsing="false" text="Action 1" />
+                                        <MenuItem mnemonicParsing="false" text="Action 2" />
+                                      </items>
+                                    </MenuButton>
+                                    <TextField promptText="Param value" />
+                                    <Button mnemonicParsing="false" text="Apply" />
+                                    <Separator orientation="VERTICAL" />
+                                    <MenuButton mnemonicParsing="false" text="Topic Group">
+                                      <items>
+                                        <MenuItem mnemonicParsing="false" text="Action 1" />
+                                        <MenuItem mnemonicParsing="false" text="Action 2" />
+                                      </items>
+                                    </MenuButton>
+                                    <Button mnemonicParsing="false" text="Apply" />
+                                    <Separator orientation="VERTICAL" />
+                                    <MenuButton mnemonicParsing="false" text="MessageType">
+                                      <items>
+                                        <MenuItem mnemonicParsing="false" text="Action 1" />
+                                        <MenuItem mnemonicParsing="false" text="Action 2" />
+                                      </items>
+                                    </MenuButton>
+                                    <Separator orientation="VERTICAL" />
+                                    <Button mnemonicParsing="false" text="SelectAll" />
+                                    <ToggleButton mnemonicParsing="false" text="ViewSelected" />
+                                    <Separator orientation="VERTICAL" />
+                                    <Button mnemonicParsing="false" text="SaveProfile" />
+                                 </items>
+                              </ToolBar>
+                              <SplitPane dividerPositions="0.16486902927580893, 0.6964560862865947" VBox.vgrow="ALWAYS">
+                                 <items>
+                                    <VBox prefHeight="339.0" prefWidth="347.0">
+                                       <children>
+                                          <TreeView prefHeight="339.0" prefWidth="169.0" VBox.vgrow="ALWAYS" />
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <TableView prefHeight="339.0" prefWidth="751.0">
+                                             <columns>
+                                                <TableColumn minWidth="0.0" prefWidth="79.0" text="id" />
+                                                <TableColumn minWidth="100.0" prefWidth="127.0" text="warehouse_code" />
+                                                <TableColumn minWidth="49.0" prefWidth="136.0" text="container_ordinal" />
+                                                <TableColumn minWidth="0.0" prefWidth="122.0" text="sensor_ordinal" />
+                                                <TableColumn minWidth="0.0" prefWidth="106.0" text="topic_group" />
+                                                <TableColumn minWidth="0.0" prefWidth="89.0" text="message" />
+                                             </columns>
+                                             <cursor>
+                                                <Cursor fx:constant="DEFAULT" />
+                                             </cursor>
+                                          </TableView>
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="339.0" prefWidth="500.0">
+                                       <children>
+                                          <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" VBox.vgrow="ALWAYS">
+                                            <tabs>
+                                              <Tab text="ChartSetup">
+                                                   <content>
+                                                      <VBox prefHeight="308.0" prefWidth="443.0">
+                                                         <children>
+                                                            <GridPane hgap="8.0">
+                                                               <columnConstraints>
+                                                                  <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" />
+                                                                  <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" />
+                                                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                                                               </columnConstraints>
+                                                               <rowConstraints>
+                                                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                               </rowConstraints>
+                                                               <children>
+                                                                  <TextField prefColumnCount="5" promptText="X position" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                                  <TextField prefColumnCount="5" promptText="Y position" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                                                                  <Button alignment="CENTER_RIGHT" mnemonicParsing="false" text="Push To" GridPane.rowIndex="1" />
+                                                                  <MenuButton mnemonicParsing="false" text="Chart Type">
+                                                                     <items>
+                                                                        <MenuItem mnemonicParsing="false" text="Action 1" />
+                                                                        <MenuItem mnemonicParsing="false" text="Action 2" />
+                                                                     </items>
+                                                                  </MenuButton>
+                                                                  <TextField prefColumnCount="10" promptText="Title" GridPane.columnIndex="1" GridPane.columnSpan="2147483647" />
+                                                               </children>
+                                                            </GridPane>
+                                                            <TableView prefHeight="200.0" prefWidth="200.0">
+                                                              <columns>
+                                                                <TableColumn prefWidth="75.0" text="id" />
+                                                                <TableColumn prefWidth="75.0" text="marker" />
+                                                                  <TableColumn prefWidth="75.0" text="color" />
+                                                              </columns>
+                                                            </TableView>
+                                                         </children>
+                                                      </VBox>
+                                                   </content>
+                                              </Tab>
+                                              <Tab text="TextView">
+                                                   <content>
+                                                      <VBox prefHeight="200.0" prefWidth="100.0">
+                                                         <children>
+                                                            <TextArea prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS" />
+                                                         </children>
+                                                      </VBox>
+                                                   </content>
+                                              </Tab>
+                                            </tabs>
+                                          </TabPane>
+                                       </children>
+                                    </VBox>
+                                 </items>
+                              </SplitPane>
+                           </children>
+                           <padding>
+                              <Insets top="4.0" />
+                           </padding>
+                        </VBox>
+                     </items>
+                  </SplitPane>
+               </content>
+          </Tab>
+          <Tab text="Untitled Tab 2">
+               <content>
+                  <SplitPane dividerPositions="0.4390602055800294" orientation="VERTICAL">
+                     <items>
+                        <VBox spacing="4.0">
+                           <children>
+                              <ToolBar scaleShape="false" style="-fx-background-color: Silver;">
+                                 <items>
+                                    <Label text="MQTT Control" />
+                                    <Separator orientation="VERTICAL" />
+                                    <Button mnemonicParsing="false" style="-fx-background-color: trans;" text="LoadContent" underline="true">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor></Button>
+                                    <Separator layoutX="764.0" layoutY="10.0" orientation="VERTICAL" />
+                                    <Label text="Schedule" />
+                                    <TextField prefColumnCount="7" promptText="initial (sec)" />
+                                    <TextField prefColumnCount="7" promptText="period (sec)" />
+                                    <TextField prefColumnCount="7" promptText="repeats" />
+                                    <ToggleButton mnemonicParsing="false" text="Apply" />
+                                    <Label />
+                                    <Label text="Round: 0001" />
+                                    <Separator orientation="VERTICAL" />
+                                    <Button mnemonicParsing="false" style="-fx-background-color: trans;" text="SendMessages" underline="true">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </Button>
+                                    <Separator layoutX="774.0" layoutY="10.0" orientation="VERTICAL" />
+                                    <Button mnemonicParsing="false" style="-fx-background-color: trans;" text="OpenExcelLogs" underline="true">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </Button>
+                                 </items>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </ToolBar>
+                              <TableView prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                                <columns>
+                                  <TableColumn prefWidth="70.0" text="id" />
+                                  <TableColumn prefWidth="128.0" text="warehouse_code" />
+                                    <TableColumn prefWidth="148.0" text="container_ordinal" />
+                                    <TableColumn prefWidth="121.0" text="sensor_ordinal" />
+                                    <TableColumn prefWidth="122.0" text="sensor_ordinal" />
+                                    <TableColumn prefWidth="111.0" text="msgSchema" />
+                                    <TableColumn prefWidth="103.0" text="command" />
+                                    <TableColumn prefWidth="95.0" text="content" />
+                                    <TableColumn prefWidth="116.0" text="prevMsgSent" />
+                                    <TableColumn prefWidth="121.0" text="onSchedule" />
+                                    <TableColumn prefWidth="122.0" text="msgFailed" />
+                                </columns>
+                              </TableView>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="436.0" prefWidth="1300.0">
+                           <children>
+                              <ToolBar style="-fx-background-color: Silver;">
+                                 <items>
+                                    <MenuButton mnemonicParsing="false" text="VN-BD-001">
+                                       <items>
+                                          <MenuItem mnemonicParsing="false" text="Action 1" />
+                                          <MenuItem mnemonicParsing="false" text="Action 2" />
+                                       </items>
+                                    </MenuButton>
+                                    <Separator orientation="VERTICAL" />
+                                    <MenuButton mnemonicParsing="false" text="Param Name">
+                                       <items>
+                                          <MenuItem mnemonicParsing="false" text="Action 1" />
+                                          <MenuItem mnemonicParsing="false" text="Action 2" />
+                                       </items>
+                                    </MenuButton>
+                                    <TextField promptText="Param value" />
+                                    <Button mnemonicParsing="false" text="Apply" />
+                                    <Separator orientation="VERTICAL" />
+                                    <MenuButton mnemonicParsing="false" text="Topic Group">
+                                       <items>
+                                          <MenuItem mnemonicParsing="false" text="Action 1" />
+                                          <MenuItem mnemonicParsing="false" text="Action 2" />
+                                       </items>
+                                    </MenuButton>
+                                    <Button mnemonicParsing="false" text="Apply" />
+                                    <Separator orientation="VERTICAL" />
+                                    <MenuButton mnemonicParsing="false" text="MessageType">
+                                       <items>
+                                          <MenuItem mnemonicParsing="false" text="Action 1" />
+                                          <MenuItem mnemonicParsing="false" text="Action 2" />
+                                       </items>
+                                    </MenuButton>
+                                    <Separator orientation="VERTICAL" />
+                                    <Button mnemonicParsing="false" text="SelectAll" />
+                                    <ToggleButton mnemonicParsing="false" text="ViewSelected" />
+                                    <Separator orientation="VERTICAL" />
+                                    <Button mnemonicParsing="false" text="SaveProfile" />
+                                 </items>
+                              </ToolBar>
+                              <SplitPane dividerPositions="0.20030816640986132, 0.7311248073959938" VBox.vgrow="ALWAYS">
+                                 <items>
+                                    <VBox prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <TreeView prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS" />
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <TableView prefHeight="339.0" prefWidth="751.0">
+                                             <columns>
+                                                <TableColumn minWidth="0.0" prefWidth="79.0" text="id" />
+                                                <TableColumn minWidth="100.0" prefWidth="127.0" text="warehouse_code" />
+                                                <TableColumn minWidth="49.0" prefWidth="136.0" text="container_ordinal" />
+                                                <TableColumn minWidth="0.0" prefWidth="122.0" text="sensor_ordinal" />
+                                                <TableColumn minWidth="0.0" prefWidth="106.0" text="topic_group" />
+                                                <TableColumn minWidth="0.0" prefWidth="89.0" text="message" />
+                                             </columns>
+                                             <cursor>
+                                                <Cursor fx:constant="DEFAULT" />
+                                             </cursor>
+                                          </TableView>
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="339.0" prefWidth="349.0">
+                                       <children>
+                                          <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" VBox.vgrow="ALWAYS">
+                                            <tabs>
+                                              <Tab text="CTableSetup">
+                                                   <content>
+                                                      <VBox prefHeight="200.0" prefWidth="100.0" />
+                                                   </content>
+                                              </Tab>
+                                              <Tab text="LogView">
+                                                   <content>
+                                                      <VBox prefHeight="200.0" prefWidth="100.0">
+                                                         <children>
+                                                            <TextArea VBox.vgrow="ALWAYS" />
+                                                         </children>
+                                                      </VBox>
+                                                   </content></Tab>
+                                            </tabs>
+                                          </TabPane>
+                                       </children>
+                                    </VBox>
+                                 </items>
+                              </SplitPane>
+                           </children>
+                           <padding>
+                              <Insets top="4.0" />
+                           </padding>
+                        </VBox>
+                     </items>
+                  </SplitPane>
+               </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</VBox>

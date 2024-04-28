@@ -1,0 +1,10 @@
+name,topicPattern,replayLength,replayPolicy
+TEMPERATURE_SYSTEM_REPORT,?warehouse_code/temperature_system/report,5,RECENT_CONTENTS
+TEMPERATURE_SYSTEM_CONTROL,?warehouse_code/temperature_system/control,1,RECENT_CONTENTS
+HUMIDITY_SYSTEM_REPORT,?warehouse_code/humidity_system/report,5,RECENT_CONTENTS
+HUMIDITY_SYSTEM_CONTROL,?warehouse_code/humidity_system/control,1,RECENT_CONTENTS
+SIDE_TEMPERATURE_REPORT,?warehouse_code/side_temperature/report/?sensor_ordinal,5,RECENT_CONTENTS
+SIDE_HUMIDITY_REPORT,?warehouse_code/side_humidity/report/?sensor_ordinal,5,RECENT_CONTENTS
+CONTAINER_STATUS_REPORT,?warehouse_code/?container_ordinal/status/report,5,RECENT_CONTENTS
+SENSOR_CONNECTED_REPORT,?warehouse_code/?container_ordinal/sensor_connected/report,1200200,DISTINCT_RECENT_CONTENTS
+SENSOR_DISCONNECTED_REPORT,?warehouse_code/?container_ordinal/sensor_disconnected/report,1200200,DISTINCT_RECENT_CONTENTS

@@ -1,0 +1,5 @@
+observerName,warehouseCode,containerOrdinal,sensorOrdinal
+toplevelmanager01,ALL,ALL,ALL
+toplevelobserver01,ALL,ALL,ALL
+warehousescopeobserver01,VN-BD-001,ALL,ALL
+containerscopeobserver01,VN-BD-002,001,ALL
